@@ -1,16 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 :root {
-    --ff: font-family: 'Inter', sans-serif;
     --fw-1: font-weight: 300;
     --fw-2: font-weight: 500;
     --fw-3: font-weight: 700;
+
     --dark-blue: hsl(240, 38%, 20%);
     --grayish-blue: Grayish Blue: hsl(240, 18%, 77%);
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+}
+
+.quote {
+    flex: 55%;
+    position: relative;
+    left: 90px;
+}
+
+.client-image {
+    flex: 45%
+}
+
+.client-image img {
+    width: 100%;
+    height: auto;
+}
+
+.client-quote {
+    font-size: 32px;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.client-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.client-name {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 1rem;
+}
+
+.client-occupation {
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-right: 1rem;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.prev {
+    padding: 1rem 2rem 1rem 1rem;
+    cursor: pointer;
+    border-radius: 20px 0 0 20px;
+    background-color: #FFF;
+    position: relative;
+    bottom: 30px;
+    left: 70px;
+    border: none;
+}
+
+.next {
+    padding: 1rem 1rem 1rem 2rem;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    background-color: #FFF;
+    position: relative;
+    bottom: 30px;
+    left: 50px;
+    border: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    
 }
