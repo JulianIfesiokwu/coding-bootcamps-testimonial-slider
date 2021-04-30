@@ -23,26 +23,27 @@
     margin: 0 auto;
     background-image: url('/assets/pattern-quotes.svg'), url(/assets/pattern-bg.svg);
     background-repeat: no-repeat, no-repeat;
-    background-position: 265px 185px, 670px  20px;
+    background-position: 100px 500px, 670px  20px;
 }
 
 .quote {
     flex: 55%;
     position: relative;
-    left: 90px;
+    left: 5.625rem;
 }
 
 .client-image {
     flex: 45%
 }
 
-.client-image img {
+img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .client-quote {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: lighter;
     margin-bottom: 2rem;
 }
@@ -65,10 +66,6 @@
     margin-right: 1rem;
 }
 
-img {
-    border-radius: 10px;
-}
-
 .prev {
     padding: 1rem 2rem 1rem 1rem;
     cursor: pointer;
@@ -78,6 +75,7 @@ img {
     bottom: 30px;
     left: 70px;
     border: none;
+    outline: none;
 }
 
 .next {
@@ -89,22 +87,84 @@ img {
     bottom: 30px;
     left: 50px;
     border: none;
-}
-
-.prev:hover, .next:hover {
-    background-color: whitesmoke;
-    color: black;
+    outline: none;
 }
 
 
 /* Media Query */
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
     .container {
+        width: 90%;
+        padding: 5rem 1rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-    }   
+        text-align: center;
+        background-position: 125px 400px, 20px  60px;
+        background-size: 20%, 90%;
+    }
+
+    .quote {
+        flex: 1;
+        position: static;
+    }
+    
+    .client-image {
+        flex: 1;
+        padding-bottom: 2rem;
+    }
+    
+    img {
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .client-quote {
+        font-size: 1rem;
+        font-weight: lighter;
+        margin-bottom: 2rem;
+    }
+
+    .client-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prev {
+        padding: 1rem 2rem 1rem 1rem;
+        cursor: pointer;
+        border-radius: 20px 0 0 20px;
+        background-color: #FFF;
+        position: relative;
+        bottom: 30px;
+        left: 10px;
+        border: none;
+    }
+    
+    .next {
+        padding: 1rem 1rem 1rem 2rem;
+        cursor: pointer;
+        border-radius: 0 20px 20px 0;
+        background-color: #FFF;
+        position: relative;
+        bottom: 30px;
+        left: -10px;
+        border: none;
+    }
+
+    .client-name {
+        font-size: 15px;
+        font-weight: bolder;
+        margin-right: 1rem;
+    }
+    
+    .client-occupation {
+        opacity: 0.8;
+        font-size: 15px;
+        font-weight: lighter;
+        margin-right: 1rem;
+    }
 }
