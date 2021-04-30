@@ -25,7 +25,7 @@ const clients = [
 ]
 
 // functions
-function prevClient(e) {
+function prevClient() {
     let clientIndex = 0;
     let currentClientName = clientName.textContent;
 
